@@ -63,7 +63,7 @@ class APIGetToken(APIView):
     Получение JWT-токена/ Адрес: 'v1/auth/token/'
     """
 
-    def send_email(user):
+    def send_email(self, user):
         confirmation_code = default_token_generator.make_token(user)
         subject = 'Код подтверждения'
         message = f'{confirmation_code} - ваш код для авторизации'
