@@ -53,8 +53,8 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
-        username: ${{secrets.USER }}
-        key: ${{secrets.SSH_KEY }}
+        username: ${{ secrets.USER }}
+        key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
           sudo docker-compose stop
