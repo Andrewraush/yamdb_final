@@ -57,6 +57,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPPHRASE }}
         script: |
+          sudo docker pull andrewraush/yamdb_final:latest
           sudo docker-compose stop
           sudo docker-compose rm web
           touch .env
